@@ -343,7 +343,7 @@
             });
         }
 
-        $('.tour-save').on('click', function() {
+        $('.tour-save').on('click', event.preventDefault() {
             if (!validate()) {
                 return;
             }
