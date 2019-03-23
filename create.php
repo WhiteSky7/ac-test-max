@@ -264,7 +264,7 @@
 <!-- <script src="/assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
 <script src="/assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
 <script src="/assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-<script src="/assets/js/app.js" type="text/javascript"></script>
+<script src="/assets/js/appapp.js" type="text/javascript"></script>
 <script src="/assets/lib/fuelux/js/wizard.js" type="text/javascript"></script>
 <script src="/assets/lib/select2/js/select2.min.js" type="text/javascript"></script>
 <script src="/assets/lib/select2/js/select2.full.min.js" type="text/javascript"></script>
@@ -284,18 +284,26 @@
 <script src="/assets/lib/mprogress/js/mprogress.min.js" type="text/javascript"></script>
 <script src="/assets/lib/prettify/prettify.js" type="text/javascript"></script>
 <script src="/assets/js/app-ajax-loader.js" type="text/javascript"></script> -->
-
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css"/>
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script><link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script src="/dropzone.js"></script>
 <script src="/js/generalForm.js" type="text/javascript"></script>
 <script src="/js/descriptionForm.js" type="text/javascript"></script>
 <script src="/js/imageForm.js" type="text/javascript"></script>
 <script src="/js/guideForm.js" type="text/javascript"></script>
 <script src="/js/destinationForm.js" type="text/javascript"></script>
 <script src="/js/videoForm.js" type="text/javascript"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
+<link href="//cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function(){
-        App.init();
-        App.formElements();
+        //App.init();
+        //App.formElements();
 
         var generalForm = new GeneralForm;
         var imageForm = new ImageForm;
@@ -343,7 +351,8 @@
             });
         }
 
-        $('.tour-save').on('click', event.preventDefault() {
+        $('.tour-save').on('click', function(e) {
+            e.preventDefault();
             if (!validate()) {
                 return;
             }
